@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kyh_01_02.hello_spring.repository.MemoryMemberRepositoryTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-02-27T22:54:16" hostname="YunJi.local" time="0.026">
+  <properties/>
+  <testcase name="findAll()" classname="com.kyh_01_02.hello_spring.repository.MemoryMemberRepositoryTest" time="0.025"/>
+  <testcase name="findByName()" classname="com.kyh_01_02.hello_spring.repository.MemoryMemberRepositoryTest" time="0.001"/>
+  <testcase name="save()" classname="com.kyh_01_02.hello_spring.repository.MemoryMemberRepositoryTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
