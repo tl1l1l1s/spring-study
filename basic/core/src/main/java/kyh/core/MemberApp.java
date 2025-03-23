@@ -3,7 +3,6 @@ package kyh.core;
 import kyh.core.member.Grade;
 import kyh.core.member.Member;
 import kyh.core.member.MemberService;
-import kyh.core.member.MemberServiceImpl;
 
 public class MemberApp {
 

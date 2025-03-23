@@ -3,10 +3,8 @@ package kyh.core;
 import kyh.core.member.Grade;
 import kyh.core.member.Member;
 import kyh.core.member.MemberService;
-import kyh.core.member.MemberServiceImpl;
 import kyh.core.order.Order;
 import kyh.core.order.OrderService;
-import kyh.core.order.OrderServiceImpl;
 
 public class OrderApp {
 

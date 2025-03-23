@@ -2,7 +2,6 @@ package kyh.core.discount;
 
 import kyh.core.member.Grade;
 import kyh.core.member.Member;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

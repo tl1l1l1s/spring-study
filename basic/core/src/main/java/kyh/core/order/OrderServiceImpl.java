@@ -1,11 +1,8 @@
 package kyh.core.order;
 
 import kyh.core.discount.DiscountPolicy;
-import kyh.core.discount.FixDiscountPolicy;
-import kyh.core.discount.RateDiscountPolicy;
 import kyh.core.member.Member;
 import kyh.core.member.MemberRepository;
-import kyh.core.member.MemoryMemberRepository;
 
 public class OrderServiceImpl implements OrderService {
 

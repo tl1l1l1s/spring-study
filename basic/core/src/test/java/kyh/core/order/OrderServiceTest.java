@@ -4,7 +4,6 @@ import kyh.core.AppConfig;
 import kyh.core.member.Grade;
 import kyh.core.member.Member;
 import kyh.core.member.MemberService;
-import kyh.core.member.MemberServiceImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
