@@ -9,30 +9,36 @@ import kyh.core.member.MemberServiceImpl;
 import kyh.core.member.MemoryMemberRepository;
 import kyh.core.order.OrderService;
 import kyh.core.order.OrderServiceImpl;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
-// 애플리케이션에 대한 환경 구성 설정을 모두 이 파일에서 진행
-    // 설정 정보(== 구성 정보)에는 역할, 역할에 따른 구현을 한 눈에 볼 수 있어야 함
+// 애플리케이션에 대한 환경 구성 설정을 모두 이 파일에서 진행 == 설정 정보, 구성 정보
+@Configuration
 public class AppConfig {
 
-    // 생성자를 통해 인스턴스 생성된 것을 넣어줌 = 생성자 주입
+    // @Bean을 붙이면 Spring Container에 등록
+    @Bean
     public MemberService memberService () {
-        return new MemberServiceImpl(getMemberRepository());
+        return new MemberServiceImpl(memberRepository());
+        // key는 함수명, memberService, value는 아래 return ... 부분 객체 인스턴스로 등록
     }
 
-    // 메서드명만 봐도 역할 확인 가능
-    private MemberRepository getMemberRepository() {
+    @Bean
+    public MemberRepository memberRepository() {
         return new MemoryMemberRepository();
     }
 
+    @Bean
     public OrderService orderService () {
         // 어디선가 OrderService 호출 시 OrderServiceImpl 반환
         return new OrderServiceImpl(
-                getMemberRepository(),
-                getDiscountPolicy()
+                memberRepository(),
+                discountPolicy()
         );
     }
 
-    private DiscountPolicy getDiscountPolicy() {
+    @Bean
+    public DiscountPolicy discountPolicy() {
         return new RateDiscountPolicy();
     }
 }
